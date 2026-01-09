@@ -1,0 +1,83 @@
+{
+    "name": "hono-starter",
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "🔥 Professional REST API starter template built with Hono, Bun, TypeScript, Prisma, PostgreSQL & Redis. Features JWT authentication, RBAC, rate limiting, OpenAPI docs, and comprehensive testing. Production-ready with Docker support.",
+    "type": "module",
+    "homepage": "https://github.com/haykal-fe-verd/hono-starter",
+    "author": {
+        "name": "Muhammad Haykal",
+        "email": "muhammadhaykall99@gmail.com",
+        "url": "https://github.com/haykal-fe-verd"
+    },
+    "repository": {
+        "type": "git",
+        "directory": "hono-starter",
+        "url": "https://github.com/haykal-fe-verd/hono-starter"
+    },
+    "keywords": [
+        "hono",
+        "typescript",
+        "rest-api",
+        "jwt-authentication",
+        "rbac",
+        "role-based-access-control",
+        "prisma",
+        "postgresql",
+        "redis",
+        "openapi",
+        "scalar",
+        "api-documentation",
+        "boilerplate",
+        "starter-template",
+        "bun",
+        "backend",
+        "middleware",
+        "zod-validation"
+    ],
+    "scripts": {
+        "dev": "bun run --hot src/index.ts",
+        "start": "bun run ./dist/src/index.js",
+        "start:compiled": "./dist/app",
+        "build": "tsc && tsc-alias && bun build src/index.ts --compile --outfile=dist/app",
+        "db:generate": "bunx --bun prisma generate",
+        "db:push": "bunx --bun prisma db push",
+        "db:pull": "bunx --bun prisma db pull",
+        "db:seed": "bunx --bun prisma db seed",
+        "db:studio": "bunx --bun prisma studio",
+        "db:migrate": "bunx --bun prisma migrate dev",
+        "db:migrate:deploy": "bunx --bun prisma migrate deploy",
+        "db:migrate:reset": "bunx --bun prisma migrate reset",
+        "db:format": "bunx --bun prisma format",
+        "typecheck": "tsc --noEmit",
+        "format": "bunx biome format --write",
+        "lint": "bunx biome lint --write",
+        "check": "bunx biome check --write"
+    },
+    "dependencies": {
+        "@hono/zod-openapi": "^1.2.0",
+        "@hono/zod-validator": "^0.7.6",
+        "@prisma/adapter-pg": "^7.2.0",
+        "@prisma/client": "^7.2.0",
+        "@scalar/hono-api-reference": "^0.9.30",
+        "chalk": "^5.6.2",
+        "hono": "^4.11.3",
+        "pg": "^8.16.3",
+        "redis": "^5.10.0",
+        "stoker": "^2.0.1",
+        "winston": "^3.19.0",
+        "winston-daily-rotate-file": "^5.0.0",
+        "zod": "^4.3.4"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.3.10",
+        "@faker-js/faker": "^10.2.0",
+        "@types/bun": "latest",
+        "@types/pg": "^8.16.0",
+        "prisma": "^7.2.0",
+        "ts-node": "^10.9.2",
+        "tsc-alias": "^1.8.16",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3"
+    }
+}

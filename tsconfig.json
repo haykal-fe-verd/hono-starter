@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "jsx": "react-jsx",
+        "jsxImportSource": "hono/jsx",
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@prisma/*": ["./prisma/*"]
+        },
+        "typeRoots": ["./node_modules/@types"],
+        "strict": true,
+        "outDir": "./dist",
+        "skipLibCheck": true
+    },
+    "tsc-alias": {
+        "resolveFullPaths": true
+    }
+}
